@@ -15,7 +15,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #111;
+        background: #eef;
         text-align: center;
       }
       * {
@@ -25,7 +25,7 @@
         width: 100%;
         padding: 0 0 56.25% 0; /* 16:9 */
         position: relative;
-        background: black;
+        background: white;
       }
 
       #iframe-container {
@@ -48,11 +48,11 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(238, 255, 255, 0.8);
         opacity: 0;
         transition: opacity 0.1s;
         z-index: 1;
-        color: grey;
+        color: orange;
         padding: 15px;
         font-size: 20px;
         font-family: monospace;
@@ -60,13 +60,13 @@
 
       .share-overlay input {
         margin-left: 15px;
-        background: transparent; 
+        background: transparent;
         font-family: monospace;
-        color: white;
+        color: blue;
         border: 0;
         outline: 0;
         font-size: 20px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid blue;
       }
 
       html:hover .share-overlay,
@@ -111,7 +111,7 @@
     <script>
       (function() {
         var prefix = '/t/';
-        var code = decodeURI(window.location.pathname.slice(prefix.length));
+        var code = ""; //decodeURI(window.location.pathname.slice(prefix.length));
         if(atob(code).length > 140) {
           alert('code too long, sorry!');
           return;
